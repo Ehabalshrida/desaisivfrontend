@@ -1,6 +1,6 @@
 [
-  { "id":"1","name": "firstName", "type": "text", "label": "First Name" },
-  { "id":"2","name": "secondName", "type": "text", "label": "Second Name" },
-  { "id":"3","name": "age", "type": "number", "label": "Age" },
-  { "id":"4","name": "password", "type": "password", "label": "Password" }
+  { "id": "1", "name": "firstName", "type": "text", "label": "First Name" },
+  { "id": "2", "name": "secondName", "type": "text", "label": "Second Name" },
+  { "id": "3", "name": "age", "type": "number", "label": "Age" },
+  { "id": "4", "name": "password", "type": "password", "label": "Password" }
 ]

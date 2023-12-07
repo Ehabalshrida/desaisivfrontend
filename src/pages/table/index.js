@@ -6,29 +6,27 @@ import DataTable from '../../components/dataTable';
 import clientData from '../../dumyDatabase/dataRows.json'
 const ClientSideDataTable = () => {
 
-  return <DataTable dataList={clientData} clientSideRendering={true}/>;
+  return <DataTable dataList={clientData} clientSideRendering={true} />;
 };
 
 export default ClientSideDataTable;
-
+// for server side rendering 
 // import React, { useEffect, useState } from 'react';
 // import DataTable from '../../components/dataTable';
 // import { fetchRecordsPerPage } from '../../services/dataTable'
 // const ServerSideDataTable = () => {
 //   const [serverData, setServerData] = useState([]);
-//   const [pageCount, setPageCount] = useState(0);
 
-//   const fetchData = async ({ pageIndex, pageSize }) => {
-//     const { rows, totalRows } = fetchRecordsPerPage(pageIndex, pageSize);
-//     setServerData(rows);
-//     setPageCount(Math.ceil(totalRows / pageSize));
+//   const fetchData = async ( pageIndex, pageSize ) => {
+//     const  res = fetchRecordsPerPage(pageIndex, pageSize);
+//     setServerData(res);
 //   };
 
 //   useEffect(() => {
-//     fetchData({ pageIndex: 0, pageSize: 10 }); // Initial data fetch
+//     fetchData(0 , 10 ); // Initial data fetch
 //   }, []);
 
-//   return <DataTable data={serverData} fetchData={fetchData} controlledPageCount={pageCount} />;
+//   return <DataTable dataList={serverData} fetchData={fetchData}  />;
 // };
 
 // export default ServerSideDataTable;

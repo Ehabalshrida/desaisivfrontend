@@ -18,7 +18,7 @@ let userReducer = (state = initialState, action) => {
         case types.LOGOUT:
             return {
                 ...state,
-                username: null,
+                username: action.payload,
             };
 
         default:

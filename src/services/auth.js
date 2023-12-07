@@ -7,11 +7,12 @@ export const login = async (LoginInfo) => {
     //  return response.data
     //else you can use the mock value
     const user = users.find((item) => item.username === LoginInfo.username
-
     )
+
     if (user !== -1) {
         if (user.password === LoginInfo.password) {
-            return { username: user.username, token: 'accesstoken' }
+            return { username: user.username, accessToken: 'accesstoken' }
+
         }
     } else {
         throw new Error();

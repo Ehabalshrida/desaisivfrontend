@@ -14,10 +14,10 @@ const Login = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    // const storedCredentials = localStorage.getItem('rememberedCredentials');
-    // if (storedCredentials) {
-    //   setCredentials(JSON.parse(storedCredentials));
-    // }
+    const storedCredentials = localStorage.getItem('rememberedCredentials');
+    if (storedCredentials) {
+      setCredentials(JSON.parse(storedCredentials));
+    }
   }, []);
 
   const handleChange = (e) => {
@@ -31,9 +31,9 @@ const Login = () => {
     e.preventDefault();
 
     try {
-      const response = login(credentials);
+      const response = await login(credentials);
       // Handle authentication success
-      dispatch( onLogin(response.data.username)); // Pass user data to parent component or update global state
+      dispatch(onLogin(response.username)); // Pass user data to parent component or update global state
 
       if (credentials.rememberMe) {
         localStorage.setItem('rememberedCredentials', JSON.stringify(credentials));
@@ -76,7 +76,7 @@ const Login = () => {
         <button type="submit">Login</button>
       </form>
     </div>
-    
+
   );
 };
 
