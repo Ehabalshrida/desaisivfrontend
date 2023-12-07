@@ -1,24 +1,35 @@
-import logo from './logo.svg';
-import './App.css';
+import { Provider } from 'react-redux';
+import React,{ Suspense } from 'react';
+import store from './stores/store';
+import {  Route, BrowserRouter as Router, Routes } from 'react-router-dom';
+import NavBar from './components/navBar';
+const DynamicForm = React.lazy(() => import('./pages/dynamicForm'))
+const Form = React.lazy(() => import('./pages/form'))
+const Table = React.lazy(() => import('./pages/table'))
+
 
 function App() {
+  const LoadingFallback = () => <div>Loading...</div>; // A loading indicator component
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+  <Provider store={store}>
+<Router>
+  <NavBar/>
+<Routes>
+{/* <Route path="/" element={<Suspense fallback={<LoadingFallback />}><DynamicForm /></Suspense>} /> */}
+{/* <Route path="/" element={<Suspense fallback={<LoadingFallback />}><Table /></Suspense>} /> */}
+{/* <Route path="/form" element={<Suspense fallback={<LoadingFallback />}><Form /></Suspense>} /> */}
+
+<Route path="/dynamicForm" element={<Suspense fallback={<LoadingFallback />}><DynamicForm /></Suspense>} />
+<Route path="/" element={<Suspense fallback={<LoadingFallback />}><Table /></Suspense>} />
+<Route path="/form" element={<Suspense fallback={<LoadingFallback />}><Form /></Suspense>} />
+
+</Routes>
+
+</Router>
+
+   </Provider>
+   
   );
 }
 
