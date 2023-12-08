@@ -2,7 +2,7 @@
 the same component DataTable to render the data */
 
 import React from 'react';
-import DataTable from '../../components/dataTable';
+import DataTable from '../../components/dataTable/dataTable';
 import clientData from '../../dumyDatabase/dataRows.json'
 const ClientSideDataTable = () => {
 

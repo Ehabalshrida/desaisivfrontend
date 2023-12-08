@@ -1,0 +1,47 @@
+@use '../../styles/variables';
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+
+  th, td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
+  }
+
+  th {
+    background-color: #f2f2f2;
+  }
+}
+
+.pagination {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 20px;
+
+  button, select, span {
+    margin-bottom: 10px;
+  }
+
+  @media (max-width: variables.$mobile-breakpoint) {
+    // Styles for mobile devices
+    flex-direction: column;
+
+    button, select, span {
+      width: 100%;
+      margin-bottom: 5px;
+    }
+  }
+
+  @media (min-width: variables.$tablet-breakpoint) {
+    // Styles for tablets and larger screens
+    button, select, span {
+      margin-bottom: 0;
+    }
+  }
+}
+

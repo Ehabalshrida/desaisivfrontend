@@ -1,6 +1,6 @@
 import React from 'react';
 import { useForm } from 'react-hook-form';
-
+import './style.scss'
 const FormPage = () => {
     const { register, handleSubmit, formState: { errors } } = useForm();
 

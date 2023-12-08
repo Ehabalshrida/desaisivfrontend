@@ -1,0 +1,39 @@
+@use '../../styles/variables';
+
+div {
+  padding: 20px;
+  text-align: center;
+
+  h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+  }
+
+  button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+  }
+
+  @media (max-width: variables.$mobile-breakpoint) {
+    // Styles for mobile devices
+    h2 {
+      font-size: 1.2rem;
+    }
+
+    button {
+      font-size: 0.9rem;
+    }
+  }
+
+  @media (min-width:variables.$tablet-breakpoint) {
+    // Styles for tablets and larger screens
+    h2 {
+      font-size: 1.8rem;
+    }
+
+    button {
+      font-size: 1.2rem;
+    }
+  }
+}

@@ -1,0 +1,44 @@
+@use '../../styles/variables';
+
+div {
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: space-around;
+    background-color: #333;
+    color: #fff;
+    font-size: 1rem;
+
+    li {
+      padding: 15px;
+
+      a {
+        color: #fff;
+        text-decoration: none;
+        transition: color 0.3s;
+
+        &:hover {
+          color: #ffd700; 
+        }
+      }
+    }
+
+    @media (max-width: variables.$mobile-breakpoint) {
+      // Styles for mobile devices
+      flex-direction: column;
+      text-align: center;
+
+      li {
+        padding: 10px;
+      }
+    }
+
+    @media (min-width: variables.$tablet-breakpoint) {
+      // Styles for tablets and larger screens
+      font-size: 1.2rem;
+    }
+  }
+}
+

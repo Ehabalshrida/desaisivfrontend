@@ -1,7 +1,7 @@
 // DataTable.js
 import React, { useMemo } from 'react';
 import { useTable, usePagination } from "react-table";
-
+import './dataTable.scss'
 const DataTable = ({ dataList, fetchData, clientSideRendering }) => {
   // Memos
   const columns = useMemo(

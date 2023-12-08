@@ -2,7 +2,7 @@ import { Provider } from 'react-redux';
 import React, { Suspense } from 'react';
 import store from './stores/store';
 import { Route, BrowserRouter as Router, Routes } from 'react-router-dom';
-import NavBar from './components/navBar';
+import NavBar from './components/navBar/navBar';
 const DynamicForm = React.lazy(() => import('./pages/dynamicForm'))
 const Form = React.lazy(() => import('./pages/form'))
 const Table = React.lazy(() => import('./pages/table'))

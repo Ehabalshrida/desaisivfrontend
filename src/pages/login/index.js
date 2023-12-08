@@ -3,7 +3,8 @@ import { login } from '../../services/auth';
 import { useDispatch } from 'react-redux';
 import { onLogin } from '../../stores/actions';
 import { useNavigate } from "react-router-dom";
-
+import {setLocalStorageKey,removeLocalStorageKey}from '../../helpers/storage'
+import './style.scss'
 const Login = () => {
   const [credentials, setCredentials] = useState({
     username: '',
@@ -33,12 +34,14 @@ const Login = () => {
     try {
       const response = await login(credentials);
       // Handle authentication success
-      dispatch(onLogin(response.username)); // Pass user data to parent component or update global state
+      setLocalStorageKey('user',response.accessToken)
+      setLocalStorageKey('username',response.username)
+      dispatch(onLogin(response.username)); // Pass user data to update global state
 
       if (credentials.rememberMe) {
-        localStorage.setItem('rememberedCredentials', JSON.stringify(credentials));
+        setLocalStorageKey('rememberedCredentials',credentials)
       } else {
-        localStorage.removeItem('rememberedCredentials');
+        removeLocalStorageKey('rememberedCredentials')
       }
       navigate('/')
     } catch (error) {

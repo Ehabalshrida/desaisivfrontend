@@ -1,6 +1,7 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom';
-import SignIn from './signIn';
+import SignIn from '../signIn/signIn';
+import './navBar.scss'
 const NavBar = () => {
   return (
     <div>
