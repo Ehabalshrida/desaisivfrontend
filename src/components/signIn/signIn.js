@@ -11,15 +11,15 @@ const SignIn = () => {
   const handlelogout = () => {
     dispatch(onLogout())
     removeLocalStorageKey('user')
+    removeLocalStorageKey('username')
     navigate("/")
   }
 const user=getLocalStorageKey('user')
-const userNameFromLocalStorage=getLocalStorageKey('username')
   return (
     <div>
       {user ?
         <div>
-          <h2>Welcome, {username?username:userNameFromLocalStorage}!</h2>
+          <h2>Welcome, {username}!</h2>
           <button onClick={handlelogout}>Logout</button>
         </div>
         :

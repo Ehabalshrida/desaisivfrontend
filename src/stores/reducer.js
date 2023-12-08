@@ -1,7 +1,7 @@
 import * as types from './actionTypes'
-
+import {getLocalStorageKey} from '../helpers/storage'
 let initialState = {
-    username: null,
+    username: getLocalStorageKey('username')||null,
 
 };
 
