@@ -5,6 +5,10 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 ## Available Scripts
 
 In the project directory, you can run:
+### `npm i`
+
+
+Use this command to setup the required Libraries locally 
 
 ### `npm start`
 
@@ -14,6 +18,16 @@ Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 The page will reload when you make changes.\
 You may also see any lint errors in the console.
 
+### `Login Credentials`
+
+Use UserName: ali
+    Passwoed: 123 
+to login to your application 
+
+### `dummy Database`
+
+since we dont have backend application to connect to, i have created mock data 
+can be seen under dumyDatabase folder in the project
 ### `npm test`
 
 Launches the test runner in the interactive watch mode.\

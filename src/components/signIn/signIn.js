@@ -20,13 +20,13 @@ const user=getLocalStorageKey('user')
       {user ?
         <div>
           <h2>Welcome, {username}!</h2>
-          <button onClick={handlelogout}>Logout</button>
+          <button className='nav-button' onClick={handlelogout}>Logout</button>
         </div>
         :
 
         <div>
 
-          <button onClick={() => navigate("/login")}>Login </button>
+          <button className='nav-button' onClick={() => navigate("/login")}>Login </button>
 
 
         </div>
