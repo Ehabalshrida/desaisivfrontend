@@ -25,7 +25,7 @@ const FormPage = () => {
                     {errors.email && <p>{errors.email.message}</p>}
                 </label>
                 <br />
-                {/* Add more form fields and validation as needed */}
+              
                 <label>
                     Age:
                     <input type="number" min={1} max={100} {...register('age', { required: 'Age is required' })} />

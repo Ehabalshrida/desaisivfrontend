@@ -3,7 +3,7 @@ import { fetchInputFields } from '../../services/dynamicForm';
 import './style.scss'
 const DynamicFormPage = () => {
   const [formData, setFormData] = useState({});
-  const [jsonInput, setJsonInput] = useState([]); // Example JSON input from the server
+  const [jsonInput, setJsonInput] = useState([]); //  JSON input from the server
 
   useEffect(() => {
     // Fetch JSON input from the server

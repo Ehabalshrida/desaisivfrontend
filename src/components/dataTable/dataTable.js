@@ -1,4 +1,3 @@
-// DataTable.js
 import React, { useMemo } from 'react';
 import { useTable, usePagination } from "react-table";
 import './dataTable.scss'

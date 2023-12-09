@@ -1,5 +1,7 @@
-/*built the codes  for client side and server side and both of them use
-the same component DataTable to render the data */
+/*
+built the codes  for client side and server side and both of them use
+the same component DataTable to render the data
+ */
 
 import React from 'react';
 import DataTable from '../../components/dataTable/dataTable';

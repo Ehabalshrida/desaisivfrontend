@@ -21,7 +21,7 @@ You may also see any lint errors in the console.
 ### `Login Credentials`
 
 Use UserName: ali
-    Passwoed: 123 
+    Password: 123 
 to login to your application 
 
 ### `dummy Database`
