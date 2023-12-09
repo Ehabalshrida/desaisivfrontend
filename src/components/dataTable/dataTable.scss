@@ -25,8 +25,16 @@ table {
 
   button, select, span {
     margin-bottom: 10px;
+    background-color: #88AB8E;
+    color: white;
+    border: none;
+    padding: 4px;
+    
   }
-
+  button[disabled]{
+    background-color: #ddd;
+  }
+  
   @media (max-width: variables.$mobile-breakpoint) {
     // Styles for mobile devices
     flex-direction: column;
