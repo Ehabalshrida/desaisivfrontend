@@ -4,7 +4,7 @@ import SignIn from '../signIn/signIn';
 import './navBar.scss'
 const NavBar = () => {
   return (
-    <div>
+    <div className='nav-bar'>
       <ul>
         <li><NavLink to="/dynamicForm">Dynamic Form</NavLink></li>
         <li><NavLink to="/">Table List</NavLink></li>
