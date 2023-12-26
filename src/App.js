@@ -11,6 +11,7 @@ const Table = React.lazy(() => import('./pages/table'))
 const Login = React.lazy(() => import('./pages/login'))
 function App () {
   return (
+    <div className='app-wrapper'>
     <Provider store={store}>
       <Router>
         <NavBar />
@@ -26,7 +27,7 @@ function App () {
       </Router>
 
     </Provider>
-
+    </div>
   );
 }
 
